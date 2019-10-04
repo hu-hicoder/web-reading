@@ -25,5 +25,6 @@
 8. How the Web works
 ```
 
-# Note
-- https://developer.mozilla.org/ja/docs/MDN/About#Copyrights_and_licenses
+# LICENSE
+- [Mozilla Web Docs Web入門](https://developer.mozilla.org/ja/docs/Learn/Getting_started_with_the_web) by [Mozilla Contributors](https://developer.mozilla.org/ja/docs/Learn/Getting_started_with_the_web$history) is licensed under [CC-BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/)
+- このコンテンツは https://developer.mozilla.org/ja/docs/MDN/About#Copyrights_and_licenses に基づき、CC-BY-SA 4.0で公開しています。
