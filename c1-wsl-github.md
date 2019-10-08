@@ -6,7 +6,7 @@
 - WSLは"Windows Subsystem for Linux"の略で、簡単に言うとWindowsの上でUbuntuなどのOSを動かしています。
 
 ## 手順
-- [公式](https://docs.microsoft.com/ja-jp/windows/wsl/install-win10)にしたがってインストールしていきます。
+- [公式](https://docs.microsoft.com/ja-jp/windows/wsl/install-win10)にしたがってインストールしていきます。Ubuntuを選択してください。
 - オプションの有効化、Storeからのインストールが終了したら、ユーザ名とパスワードを決めて完了です。初期化に割と時間がかかるので、気長にやってください。
 
 ## 注意
@@ -18,6 +18,7 @@
 
 ## 準備
 - まず、自分の作業フォルダを決めます。ここでは`C:\project\`とします。(Windows側です)
+- 次に、WSLに入ります。Windowsボタンを押して、「Ubuntu」と打ち込んでください。
 - 次に、そこに向けてWSLからシンボリックリンクを張ります(WSL側で以下のコマンドを打ちます)
 ```
 ln -s /mnt/c/project/ ~/project
