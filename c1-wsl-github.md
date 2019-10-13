@@ -38,13 +38,13 @@ sudo apt update && apt upgrade
 ```
 mkdir ~/.ssh
 ```
-- Nameは`github_key`, passphraseは指定しなくていいです。
-```
-ssh-keygen -t rsa
-```
-- `~/.ssh`を確認します。
 ```
 cd ~/.ssh
+ssh-keygen -t rsa
+```
+- Nameは`github_key`, passphraseは指定しなくていいです。
+- `~/.ssh`を確認します。
+```
 ls
 ```
 - ファイルがあればOKです。
@@ -68,6 +68,10 @@ Host github.com
     HostName github.com
     PreferredAuthentications publickey
     IdentityFile ~/.ssh/github_key
+```
+- configの権限を変更します
+```
+chmod 600 config
 ```
 - sshが通るか確認します
 ```
