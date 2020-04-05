@@ -7,6 +7,8 @@
 - 基本は公式を見ること。 https://git-scm.com/doc ここにDocumentationがまとまっている。
 - チュートリアル https://learngitbranching.js.org
 
+## Gitの使い方
+- 練習として、このリポジトリのpracticeブランチにPull Requestを送るところまでやってみましょう。
 
 ## 備考
 - Learn Git Branchingの存在は[imikoさん](https://github.com/a-yuto)から教えて頂きました。ありがとうございます。
