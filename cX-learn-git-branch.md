@@ -62,3 +62,52 @@ git rebase master
 
 ## Ramping up
 ### HEAD
+- HEADはシンボルとしての名前。HEADは、一番最近のcommitをさしている。ほとんどの場合、working treeに変更を加えるということは、HEADを変更するということ。
+- 普通、HEADはブランチ名を指す。
+- bugFixからdetach HEADして、代わりにcommitにHEADをattachする
+```
+git checkout C4
+```
+- commit hashに対してcheckoutするということ？
+
+### Relative Refs
+- `git log`でhashを見る
+- `fed2da64c0efc5293610bdd892f82a58e8cbc5d8`というhashを`fed2`で補完してくれる
+- 相対的な位置で表現する
+- `^`でひとつ分だけ親の方向に
+- `~<num>`でその数だけ親の方向に進む
+- `HEAD^`の繰り返しで1つずつ親の方向に進める
+```
+git checkout bugFix
+git checkout C4
+git checkout HEAD^
+```
+- 少し冗長な書き方
+
+### The "~" operator
+- `^`だと一個ずつの移動なので、まとめて何マスか移動したいときは`~`を使う
+
+### Branch forcing
+- `git branch -f master HEAD~3` で、強制的にmasterが指し示す先をHEADから3つ親に変更する
+```
+git checkout master
+git branch -f master C6
+git checkout bugFix
+git branch -f bugFix HEAD~3
+git checkout C1
+```
+- 3コマンドでいけるらしい
+
+### Reversing Changes in Git
+- 巻き戻しのやり方は`git reset`と`git revert`の2つがある
+- `reset`はhistoryの書き換えができる。ひとりでやっているときならOK
+- `revert`は誰かと共同作業していたりリモートブランチがあるときに使う。`C2` -> `C2'`のように、新しく後ろに巻き戻したcommitを付け加えるイメージ
+```
+git reset HEAD^
+git checkout pushed
+git revert HEAD
+```
+- resetとrevertでHEADからの相対距離指定が違うので気をつける。
+
+### Git Cherry-pick
+- 
