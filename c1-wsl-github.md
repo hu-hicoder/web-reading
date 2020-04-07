@@ -35,6 +35,11 @@ sudo apt update && apt upgrade
 
 ## 手順
 - GitHubでアカウントを取得します。パスワードは手元に控えておいてください。
+- gitにnameとemailを登録します。nameはGitHubのアカウント名、emailはGitHubに登録するときに使ったものを使ってください
+```
+git config --global user.name "自分の名前"
+git config --global user.email "メール@example.com"
+```
 - 次にWSL側では、鍵を生成します。
 ```
 mkdir ~/.ssh
